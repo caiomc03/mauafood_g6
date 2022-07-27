@@ -26,8 +26,12 @@ class LoginPage extends StatelessWidget {
             children:  [
               const SizedBox(height: 200,),
               Container(
+                
                 decoration: const BoxDecoration(
+                   borderRadius: BorderRadius.all(
+                    Radius.circular(10)),
                   color: Colors.white,
+                  
                 ),
                 margin: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
@@ -35,14 +39,14 @@ class LoginPage extends StatelessWidget {
                     const Text('Login',style: TextStyle(fontSize: 24) ,),
                     const TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                          border: InputBorder.none,
                           labelText: 'Nome de usuário ou email',
       ),
                     ),
                     const TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                          border: InputBorder.none,
                           labelText: 'Senha',
       ),
                     ),
