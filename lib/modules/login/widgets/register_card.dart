@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mauafood_g6/shared/themes/app_colors.dart';
+
 import 'text_field.dart';
 
-class LoginCard extends StatelessWidget {
-  const LoginCard({Key? key}) : super(key: key);
+class RegisterCard extends StatelessWidget {
+  const RegisterCard({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,24 +16,24 @@ class LoginCard extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              'Login',
+              'Criar uma Conta',
               style: TextStyle(fontSize: 24),
             ),
             const TextFields(
-              title: 'Nome de usuário ou email',
+              title: 'Nome',
+              obscure: false,
+            ),
+            const TextFields(
+              title: 'Email',
               obscure: false,
             ),
             const TextFields(
               title: 'Senha',
               obscure: true,
             ),
-            TextButton(
-              style: TextButton.styleFrom(
-                primary: AppColors.orange,
-                textStyle: const TextStyle(fontSize: 16),
-              ),
-              onPressed: () {},
-              child: const Text('Esqueci minha senha'),
+            const TextFields(
+              title: 'Confirmar senha',
+              obscure: true,
             ),
             SizedBox(
               width: 256,
@@ -42,7 +43,7 @@ class LoginCard extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     primary: AppColors.orange, shape: const StadiumBorder()),
                 child: const Text(
-                  'Entrar',
+                  'Cadastrar',
                   style: TextStyle(fontSize: 24),
                 ),
               ),

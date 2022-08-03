@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mauafood_g6/modules/login/widgets/login_card.dart';
-import 'package:mauafood_g6/modules/login/widgets/register_textbutton.dart';
+import 'package:mauafood_g6/modules/login/widgets/login_textbutton.dart';
+import 'package:mauafood_g6/modules/login/widgets/register_card.dart';
 import 'package:mauafood_g6/shared/themes/app_colors.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,11 +31,14 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 200,
               ),
-              LoginCard(),
+              RegisterCard(),
               SizedBox(
                 height: 100,
               ),
-              RegisterButton(title: 'Não tem uma conta?',button: 'Registre-se',),
+              LoginButton(
+                title: 'Já tem uma conta?',
+                button: 'Fazer Login',
+              ),
             ],
           )),
     );

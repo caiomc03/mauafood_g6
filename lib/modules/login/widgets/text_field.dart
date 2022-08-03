@@ -12,7 +12,8 @@ class TextFields extends StatelessWidget {
       child: TextField(
         obscureText: obscure,
         decoration: InputDecoration(
-          border: const UnderlineInputBorder(),
+          border: const UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.black)),
           labelText: title,
         ),
       ),
