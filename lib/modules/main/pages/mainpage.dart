@@ -80,6 +80,7 @@ class SearchState extends State<MainPage> {
                   const HorizontalList(
                     altura: 80,
                     largura: 100,
+                    itens:10,
                   ),
                   Row(
                     children: const [
@@ -93,7 +94,7 @@ class SearchState extends State<MainPage> {
                       ),
                     ],
                   ),
-                  const HorizontalList(altura: 150, largura: 150),
+                  const HorizontalList(altura: 150, largura: 150,itens:10,),
                   const ItensHorizontalList(title: 'Pratos'),
                   const ItensHorizontalList(title: 'Lanches'),
                   const ItensHorizontalList(title: 'Favoritos'),

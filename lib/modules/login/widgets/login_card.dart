@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauafood_g6/modules/main/pages/mainpage.dart';
 import 'package:mauafood_g6/shared/themes/app_colors.dart';
 import 'text_field.dart';
 
@@ -38,7 +39,11 @@ class LoginCard extends StatelessWidget {
               width: 256,
               height: 40,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return const MainPage();
+                  }));
+                },
                 style: ElevatedButton.styleFrom(
                     primary: AppColors.orange, shape: const StadiumBorder()),
                 child: const Text(
