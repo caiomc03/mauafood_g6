@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mauafood_g6/modules/main/widgets/horizontal_list.dart';
 import 'package:mauafood_g6/modules/main/widgets/itens_and_title_horizontal_list.dart';
+import 'package:mauafood_g6/shared/themes/app_colors.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -18,9 +19,12 @@ class SearchState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: AppColors.grey,
         appBar: AppBar(
           //seria bom colocar essa appbar como widget, mas ainda n sei como fazer F
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
           title: customSearchBar,
           centerTitle: true,
           actions: [
@@ -70,7 +74,7 @@ class SearchState extends State<MainPage> {
         body: Column(
           children: [
             SizedBox(
-              height: 700,
+              height: 728,
               child: ListView(
                 children: [
                   const HorizontalList(
@@ -96,9 +100,44 @@ class SearchState extends State<MainPage> {
                 ],
               ),
             ),
-            Column(
-              children: [Row()],
-            )
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColors.orange,
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: 360,
+                        child: Row(
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.shopping_cart,
+                                  color: Colors.white,
+                                  size: 48,
+                                )),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.house,
+                                    color: Colors.white, size: 48)),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.list,
+                                    color: Colors.white, size: 48))
+                          ],
+                        ),
+                      )),
+                ],
+              ),
+            ),
           ],
         ));
   }
